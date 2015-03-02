@@ -1,3 +1,4 @@
+require 'haml-rails'
 require 'ember-rails'
 require 'ember_script-rails'
 require 'emblem/rails'
