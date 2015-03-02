@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Herd</title>
+  <%= csrf_meta_tags %>
+  <%= content_for?(:head) ? yield(:head) : '' %>
+</head>
+<body>
+  <div id="herd-uploader">
+    <%= yield %>
+  </div>
+</body>
+</html>
