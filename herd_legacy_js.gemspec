@@ -20,9 +20,9 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "> 4"
 
   s.add_dependency "coffee-rails"
-  s.add_dependency 'ember-rails'
-  s.add_dependency 'ember-source'
-  s.add_dependency 'emblem-rails'
+  s.add_dependency 'ember-rails', '0.15.0'
+  s.add_dependency 'ember-source', '1.6.1'
+  s.add_dependency 'emblem-rails', '0.2.1'
   s.add_dependency 'ember_script-rails'
   s.add_dependency 'jquery-rails'#, '~> 3.1.0'
   s.add_dependency 'jquery-ui-rails'#, '4.1.2'
