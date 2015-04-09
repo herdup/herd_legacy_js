@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'jquery-ui-rails'#, '4.1.2'
   s.add_dependency "haml-rails"
   s.add_dependency 'handlebars'
+  s.add_dependency 'execjs', '2.2.1'
 
   s.add_development_dependency "sqlite3"
 end
