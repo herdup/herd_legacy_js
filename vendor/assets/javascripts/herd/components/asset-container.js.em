@@ -31,14 +31,14 @@ Herd.AssetContainerComponent = Ember.Component.extend
       if Ember.empty @child.fileName
         return "https://d13yacurqjgara.cloudfront.net/users/82092/screenshots/1073359/spinner.gif"
       else
-        return "#{@child?.url}?b=#{@child.updatedAt.getTime()}"
+        return "#{@child?.absoluteUrl}?b=#{@child.updatedAt.getTime()}"
 
     else if @asset and (@t or @combinedName)
       @child = @asset if @asset.assetableId == 0
       @child = @asset.n @combinedName if !@child and @combinedName
       @child = @asset.t @t unless @child
 
-      if @child?.fileName and @child?.url
+      if @child?.fileName and @child?.absoluteUrl
         return @assetUrl
 
       else if !@child or !@child.fileName

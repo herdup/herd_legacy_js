@@ -31,6 +31,12 @@ class Herd.Asset extends DS.Model
     @childAssets.find (item, ix) ->
       item.transform.name == name
 
+  absoluteUrl: ~> 
+    if @url.charAt(0) == '/'
+      this.store.adapterFor('application').get('host') + @url
+    else
+      @url
+
 class Herd.AssetSerializer extends DS.ActiveModelSerializer with DS.EmbeddedRecordsMixin
   attrs:
     transform: {serialize: 'records'}
