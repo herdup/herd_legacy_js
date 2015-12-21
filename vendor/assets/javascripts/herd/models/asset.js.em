@@ -16,7 +16,7 @@ class Herd.Asset extends DS.Model
   assetableType: DS.attr 'string'
 
   parentAsset: DS.belongsTo 'asset', { inverse: 'childAssets' }
-  childAssets: DS.hasMany 'asset', { inverse: null }
+  childAssets: DS.hasMany 'asset', { inverse: 'parentAsset', async: true }
 
   transform: DS.belongsTo 'transform'
 
@@ -32,8 +32,8 @@ class Herd.Asset extends DS.Model
       item.transform.name == name
 
   absoluteUrl: ~> 
-    if @url.charAt(0) == '/'
-      this.store.adapterFor('application').get('host') + @url
+    if @url.charAt(0) == '/' and @url.charAt(1) != '/' and (host = @store.adapterFor('application').host)
+      host + @url
     else
       @url
 
