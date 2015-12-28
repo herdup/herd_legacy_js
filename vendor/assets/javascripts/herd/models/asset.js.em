@@ -16,7 +16,7 @@ class Herd.Asset extends DS.Model
   assetableType: DS.attr 'string'
 
   parentAsset: DS.belongsTo 'asset', { inverse: 'childAssets' }
-  childAssets: DS.hasMany 'asset', { inverse: 'parentAsset', async: true }
+  childAssets: DS.hasMany 'asset', { inverse: 'parentAsset' }
 
   transform: DS.belongsTo 'transform'
 
