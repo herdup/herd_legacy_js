@@ -16,7 +16,7 @@ class Herd.Asset extends DS.Model
   assetableType: DS.attr 'string'
 
   parentAsset: DS.belongsTo 'asset', { inverse: 'childAssets' }
-  childAssets: DS.hasMany 'asset', { inverse: null }
+  childAssets: DS.hasMany 'asset', { inverse: 'parentAsset', async: true }
 
   transform: DS.belongsTo 'transform'
 
@@ -30,6 +30,12 @@ class Herd.Asset extends DS.Model
   n: (name) ->
     @childAssets.find (item, ix) ->
       item.transform.name == name
+
+  absoluteUrl: ~> 
+    if @url.charAt(0) == '/' and @url.charAt(1) != '/' and (host = @store.adapterFor('application').host)
+      host + @url
+    else
+      @url
 
 class Herd.AssetSerializer extends DS.ActiveModelSerializer with DS.EmbeddedRecordsMixin
   attrs:
