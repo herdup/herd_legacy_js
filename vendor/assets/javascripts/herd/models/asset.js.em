@@ -37,6 +37,3 @@ class Herd.Asset extends DS.Model
     else
       @url
 
-class Herd.AssetSerializer extends DS.ActiveModelSerializer with DS.EmbeddedRecordsMixin
-  attrs:
-    transform: {serialize: 'records'}

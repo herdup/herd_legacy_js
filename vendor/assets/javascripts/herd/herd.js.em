@@ -1,8 +1,9 @@
-#= require ./store
 #= require_tree ./mixins
+#= require_tree ./serializers
+#= require_tree ./adapters
 #= require_tree ./initializers
+#= require ./store
 #= require_tree ./models
-#= require_self
 #= require_tree ./controllers
 #= require_tree ./singletons
 #= require_tree ./views
