@@ -31,7 +31,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'barber'#, '0.4.2'
   s.add_dependency 'barber-emblem'#, '0.1.1'
   s.add_dependency 'execjs'#, '2.2.1'
-  s.add_dependency 'ember-emblem-template'
 
   s.add_development_dependency "sqlite3"
 end
