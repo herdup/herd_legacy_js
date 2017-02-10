@@ -5,7 +5,6 @@ module HerdLegacyJs
   class Engine < ::Rails::Engine
     require 'ember-rails'
     require 'emblem/rails'
-    require 'ember/emblem/rails'
     require 'ember_script-rails'
 
   end
