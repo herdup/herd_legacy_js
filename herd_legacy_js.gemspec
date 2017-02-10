@@ -22,16 +22,17 @@ Gem::Specification.new do |s|
   s.add_dependency "coffee-rails"
   s.add_dependency 'ember-rails', '0.19.0'
   s.add_dependency 'ember-source', '~> 1.11.3.1'
-  s.add_dependency 'emblem-rails'#, '0.2.1'
+  s.add_dependency 'emblem-rails', '0.2.1'
   s.add_dependency 'ember-emblem-template'
   s.add_dependency 'emblem-source', '~> 0.4'
   s.add_dependency 'ember_script-rails'
-  s.add_dependency 'jquery-rails'#, '~> 3.1.0'
+  s.add_dependency 'jquery-rails', '~> 3.1.0'
   s.add_dependency 'haml-rails'
   s.add_dependency 'handlebars-source'
-  s.add_dependency 'barber'#, '0.4.2'
-  s.add_dependency 'barber-emblem'#, '0.1.1'
-  s.add_dependency 'execjs'#, '2.2.1'
+  # s.add_dependency 'barber', '0.4.2'
+  # s.add_dependency 'barber-emblem', '0.1.1'
+  s.add_dependency 'execjs', '2.7.0'
+  s.add_dependency 'sprockets-rails'
 
   s.add_development_dependency "sqlite3"
 end
